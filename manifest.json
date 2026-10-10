@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "音樂播放器",
+  "version": "0.1.0",
+  "description": "在任何網頁上開一個浮動音樂面板：上傳自己的音樂與 .vtt 台詞、建專輯、排序、隨機播放。",
+  "permissions": ["storage", "unlimitedStorage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["player.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["library.html"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "action": {
+    "default_title": "音樂播放器"
+  },
+  "icons": {}
+}

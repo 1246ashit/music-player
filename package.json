@@ -1,0 +1,20 @@
+{
+  "name": "music-player",
+  "version": "0.1.0",
+  "description": "在任何網頁上使用的浮動音樂播放器（Chrome MV3 擴充功能）。",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "node scripts/build.mjs",
+    "build:watch": "node scripts/build.mjs --watch"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "fake-indexeddb": "^6.2.5",
+    "jsdom": "^29.1.1",
+    "vitest": "^4.1.10"
+  }
+}
